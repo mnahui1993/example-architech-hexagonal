@@ -1,0 +1,36 @@
+# ===============================
+# DATASOURCE SQL SERVER
+# ===============================
+quarkus:
+  application:
+    name: "quarkus-app"
+  datasource:
+    db-kind: mssql
+    username: sa
+    password: NuevoPassword123!
+    jdbc:
+      url: jdbc:sqlserver://localhost:1433;databaseName=prueba;encrypt=false;trustServerCertificate=false
+
+  micrometer:
+    enabled: true
+    export:
+      prometheus:
+        path: /q/metrics
+      common-tags:
+        application: "quarkus-app"
+    # Esto es Senior: añade nombres de tu app a cada métrica automáticamente
+    binder:
+      http-client:
+        enabled: true
+      jvm:
+        enabled: true
+
+  hibernate-orm:
+    database:
+      generation: none
+
+  log:
+    level: INFO
+    category:
+      "org.marco":
+        level: INFO
