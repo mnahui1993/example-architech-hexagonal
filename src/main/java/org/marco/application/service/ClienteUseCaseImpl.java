@@ -11,15 +11,15 @@ import org.marco.domain.model.Cliente;
 import org.marco.infraestructure.persistance.entities.ClienteEntity;
 
 @ApplicationScoped
-public class CreateClienteUseCaseImpl implements CreateClienteUserCase {
+public class ClienteUseCaseImpl implements CreateClienteUserCase {
 
-  private static final Logger LOG = Logger.getLogger(CreateClienteUseCaseImpl.class);
+  private static final Logger LOG = Logger.getLogger(ClienteUseCaseImpl.class);
 
   private final ClienteRepositoryPort clienteRepositoryPort;
 
   private final static String EMAIL_PROHIBIDO = "marcoanv13@gmail.com";
 
-  public CreateClienteUseCaseImpl(ClienteRepositoryPort clienteRepositoryPort) {
+  public ClienteUseCaseImpl(ClienteRepositoryPort clienteRepositoryPort) {
     this.clienteRepositoryPort = clienteRepositoryPort;
   }
 

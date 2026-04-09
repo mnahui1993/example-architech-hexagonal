@@ -29,7 +29,7 @@ class CreateClienteUseCaseImplTest {
 
 
   @InjectMocks
-  CreateClienteUseCaseImpl createClienteUseCase;
+  ClienteUseCaseImpl createClienteUseCase;
 
   @Test
   void createClient_withValidData_shouldSaveClient() {
